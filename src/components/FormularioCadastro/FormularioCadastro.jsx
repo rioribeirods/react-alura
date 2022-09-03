@@ -30,6 +30,11 @@ class FormularioCadastro extends Component {
     return (
       <form className="form-cadastro"
         onSubmit={this._criarNota.bind(this)}>
+          <select name="" className="form-cadastro_input" id="">
+          {this.props.categorias.map(categoria => {
+            return <option value="">{categoria}</option>
+          })}
+          </select>
         <input
           type="text"
           placeholder="Título"
